@@ -1,13 +1,5 @@
-<!DOCTYPE html>
 <html>
 	<head>
-			<meta charset="utf-8">
-    	<meta name="viewport" content="width=device-width">
-    	<link rel='stylesheet' href='style.css'>
-    	<script src="./scripts/script.js"></script>
-    	<script src="./scripts/jquery.js"></script>
-    	<title>FL EXperience</title>
-
 		<!-- Include demo stylesheet -->
 		<link href="style.css" rel="stylesheet" type="text/css">
 
@@ -20,15 +12,8 @@
 		<script type="text/javascript" src="./src/backstretch.js"></script>
 		<script type="text/javascript" src="./src/custom.js"></script>
 	</head>
+
 	<body>
-		<div id="fb-root"></div>
-		<script>(function(d, s, id) {
-		  var js, fjs = d.getElementsByTagName(s)[0];
-		  if (d.getElementById(id)) return;
-		  js = d.createElement(s); js.id = id;
-		  js.src = "https://connect.facebook.net/nl_NL/all.js#xfbml=1&appId=462401843842149";
-		  fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));</script>
 
 		<header id="top">
 			<div id="logo"><span class='logo'>Team Grimy Geekos</span><span class='dynamic'></span></div>
@@ -114,10 +99,7 @@
 
 
 
-			<div class="copy">
-				A project of: <a href="https://plus.google.com/117252832783742670535" rel="publisher">Dirk Groenen+</a> | <a href="https://github.com/dirkgroenen">Github: Dirk Groenen</a>
-			</div>
-		</div>
+
 
 		<script type="text/javascript" src="transit.js"></script>
 		<script type="text/javascript" src="touchSwipe.js"></script>
@@ -130,7 +112,46 @@
 		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
 		  ga('create', 'UA-45574670-2', 'bitlabsbeta.nl');
-		  ga('send', 'pageview');
+			ga('send', 'pageview');
+
+
 		</script>
-	</body>
+	<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script></body>
 </html>
