@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel='stylesheet' href='style.css'>
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/jquery.js"></script>
+    <title>FL EXperience</title>
+</head>
+<body>
+<section id="homepage" class="page">
+  <h1>FLEX: The Financial Literacy EXperience</h1>
+  <p></p>
+  <div>
+    <a href="#howto" class="btn">Enter<i class="fas fa-arrow-circle-down"></i></a>
+  </div>
+</section>
+
+<section id="howto" class="page">
+  <h1>How to Play</h1>
+  <p>Making Financial Decisions:</p>
+<p>This game focuses on the management of day-to-day expenses. This is an opportunity to have a detached interaction with common life decisions, while learning about many personal finance concepts.
+
+  You will be presented with various scenarios and be required to make a decision. Each decision you make affects some aspect of your life, whether it is your wellbeing, your bank account, or both. The game is designed to make you think about how to balance life decisions. Everyone’s situation and priorities are different so we could never capture all possibilities. Nevertheless, we hope you enjoy this financial literacy experience. Good Luck and Enjoy!!!!
+  </p>
+  <ul>
+    <li>
+      <a href="#homepage">Home</a>
+    </li>
+  </ul>
+  <div>
+    <a href="#postgrad" class="btn">Start Adulting<i class="fas fa-arrow-circle-down"></i></a>
+  </div>
+</section>
+
+<section id="postgrad" class="page">
+    <h1>The Big Decision</h1>
+    <p>You must decide whether you will go to college or enter the job market. What is your next step in life?</p>
+    <div>
+      <a href="#college" class="btn">College<i class="fas fa-arrow-circle-down"></i></a>
+      <a href="#homepage" class="btn">Job Market<i class="fas fa-arrow-circle-down"></i></a>
+    </div>
+</section>
+
+
+
+<section id="" class="page">
+  <h1>FLEX: The Financial Literacy EXperience</h1>
+  <p></p>
+  <div>
+    <a href="#howto" class="btn">Enter<i class="fas fa-arrow-circle-down"></i></a>
+  </div>
+</section>
+  <section>
+
+  </section>
+  </div>
+  <script>
+    //Smooth Scrolling
+    $('.btn').on('click', function (evt) {
+        if (this.hash !== '') {
+            evt.preventDefault();
+            const hash = this.hash;
+            $('html,body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800);
+        }
+    })
+</script>
+
+</body>
+</html>
