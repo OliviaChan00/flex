@@ -1,0 +1,119 @@
+:root {
+    --animate-speed: 2s;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.orange {
+    background-color: orange;
+    animation-duration: 0ms;
+}
+
+.tan {
+    background: rgb(255,254,234);
+    background: linear-gradient(0deg, rgba(255,254,234,1) 37%, rgba(247,179,103,1) 91%);
+}
+
+.teal {
+    background-color: teal;
+}
+
+
+.topnav {
+    position: fixed;
+    top:0;
+    left:0;
+    overflow: hidden;
+    background-color: #333;
+      }
+
+ .topnav a {
+     float: left;
+     color: #f2f2f2;
+     text-align: center;
+     padding: 14px 16px;
+      text-decoration: none;
+     font-size: 17px;
+     overflow: hidden;
+    background-color: #333;
+    }
+
+
+.page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 4rem;
+}
+
+.page h1 {
+    font-size: 4rem;
+    line-height: 1.2;
+    margin: 1rem;
+}
+
+.page p {
+    font-size: 1.3rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #f4f4f4;
+    color: #333;
+    text-decoration: none;
+    border: none;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    transition: all 0.3s ease-in;
+}
+
+.btn:hover,
+.btn-dark {
+    background: #333;
+    color: #FFF;
+}
+
+.btn-dark:hover {
+    background: #f4f4f4;
+    color: #333;
+}
+
+
+/* page animation */
+
+#homepage h1 {
+    transform: translateY(-1200px);
+    animation: heading var(--animate-speed) forwards ease-in;
+}
+
+#homepage p {
+    transform: translateX(-1800px);
+    animation: text var(--animate-speed) forwards ease-in 2s;
+}
+
+
+/*Keyframes */
+
+@keyframes heading {
+    to {
+        transform: translateY(0)
+    }
+}
+
+@keyframes text {
+    to {
+        transform: translateX(0)
+    }
+}
+/*Pages */
